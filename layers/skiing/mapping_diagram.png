@@ -1,0 +1,17 @@
+digraph "Imposm Mapping" {
+	graph [rankdir=LR ranksep=3]
+	subgraph skiing_linestring {
+		node [fixed_size=shape "width:"=20]
+		skiing_linestring [shape=box]
+		key_aerialway [label=aerialway shape=box]
+		key_aerialway -> skiing_linestring [label="cable_car
+gondola
+chair_lift
+mixed_lift
+drag_lift
+t-bar
+j-bar
+platter
+magic_carpet"]
+	}
+}
