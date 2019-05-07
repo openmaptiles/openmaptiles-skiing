@@ -1,0 +1,31 @@
+layer:
+  id: "skiing"
+  description: |
+      **skiing** contains skiing transportation for passengers.
+  buffer_size: 4
+  srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+  fields:
+    class:
+      description: |
+          Distinguish between aerialway values.
+          Class is derived from the value of the
+          [`aerialway`](http://wiki.openstreetmap.org/wiki/Key:aerialway) tag.
+      values:
+      - cable_car
+      - gondola
+      - chair_lift
+      - mixed_lift
+      - drag_lift
+      - t-bar
+      - j-bar
+      - platter
+      - magic_carpet
+  datasource:
+    geometry_field: geometry
+    srid: 900913
+    query: (SELECT geometry, class, name FROM layer_skiing(!bbox!, z(!scale_denominator!))) AS t
+schema:
+  - ./layer.sql
+datasources:
+  - type: imposm3
+    mapping_file: ./mapping.yaml
