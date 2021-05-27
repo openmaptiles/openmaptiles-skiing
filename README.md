@@ -1,4 +1,8 @@
-## OpenMapTiles
+## OpenMapTiles - example of how to make your own layer from OSM tags
+
+See the video from State of the Map conference on How to modify the OpenMapTiles:
+
+https://youtu.be/oI4GJE_v-zo?t=832
 
 OpenMapTiles is an extensible and open vector tile schema for a OpenStreetMap basemap. It is used to generate vector tiles for [openmaptiles.org](https://openmaptiles.org/) and [openmaptiles.com](https://openmaptiles.com/).
 
